@@ -1,3 +1,9 @@
+:root {
+    --red: #9c1212; 
+    --green: #5f9341;   
+}
+
+
 body {
     margin: 0;
     padding: 10px;
@@ -9,21 +15,22 @@ input {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #5f9341;
+    border: 1px solid var(--green);
     margin-bottom: 4px;
 }
 
 button {
-    background: #5f9341;
+    background: var(--green);
     color: white;
     padding: 10px 20px;
-    border: 1px solid #5f9341;
+    border: 1px solid var(--green);
     font-weight: bold;
 }
 
 #delete-btn {
+    border: 1px solid var(--red);
     background: white;
-    color: #5f9341;
+    color: var(--red);
 }
 
 ul {
@@ -37,9 +44,30 @@ li {
 }
 
 a {
+    text-decoration: none;
     color: #5f9341;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 button:hover {
     cursor: pointer;
+}
+
+.delete-item-btn {
+    background: none;
+    color: var(--red);
+    padding: 1px 5px;
+    border: 1px solid var(--red);
+    font-weight: bold;
+    margin: 2px;
+    margin-left: 10px;
+    opacity: 0;
+}
+
+.delete-item-btn:hover {
+    opacity: 1;
+    transition: 1s;
 }
